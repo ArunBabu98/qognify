@@ -12,7 +12,10 @@ fn main() -> eframe::Result<()> {
 
     info!("Starting qognify...");
 
-    let native_options = eframe::NativeOptions::default();
+    let native_options = eframe::NativeOptions {
+        viewport: eframe::egui::ViewportBuilder::default().with_maximized(true),
+        ..Default::default()
+    };
 
     // Launch
     eframe::run_native(
