@@ -1,5 +1,6 @@
 // main.rs
 mod app;
+mod core;
 
 use tracing::info;
 use tracing_subscriber;

@@ -28,25 +28,29 @@ impl MyApp {
                 is_open: true,
                 items: vec![
                     MenuItem {
-                        title: "Neural Networks".to_string(),
-                        description: "Visualize neural network architectures".to_string(),
+                        title: "Linear Regression".to_string(),
+                        description: "Visualize Linear Regression".to_string(),
                     },
-                    MenuItem {
-                        title: "Embeddings".to_string(),
-                        description: "Vector space representations".to_string(),
-                    },
-                    MenuItem {
-                        title: "Activation Functions".to_string(),
-                        description: "Explore ReLU, Sigmoid, Tanh".to_string(),
-                    },
-                    MenuItem {
-                        title: "Gradient Descent".to_string(),
-                        description: "Optimization visualization".to_string(),
-                    },
-                    MenuItem {
-                        title: "Attention Mechanisms".to_string(),
-                        description: "Transformer attention patterns".to_string(),
-                    },
+                    // MenuItem {
+                    //     title: "Neural Networks".to_string(),
+                    //     description: "Visualize neural network architectures".to_string(),
+                    // },
+                    // MenuItem {
+                    //     title: "Embeddings".to_string(),
+                    //     description: "Vector space representations".to_string(),
+                    // },
+                    // MenuItem {
+                    //     title: "Activation Functions".to_string(),
+                    //     description: "Explore ReLU, Sigmoid, Tanh".to_string(),
+                    // },
+                    // MenuItem {
+                    //     title: "Gradient Descent".to_string(),
+                    //     description: "Optimization visualization".to_string(),
+                    // },
+                    // MenuItem {
+                    //     title: "Attention Mechanisms".to_string(),
+                    //     description: "Transformer attention patterns".to_string(),
+                    // },
                 ],
             },
             Category {
@@ -57,22 +61,22 @@ impl MyApp {
                         title: "Quantum States".to_string(),
                         description: "Superposition and measurement".to_string(),
                     },
-                    MenuItem {
-                        title: "Quantum Gates".to_string(),
-                        description: "Pauli, Hadamard, CNOT gates".to_string(),
-                    },
-                    MenuItem {
-                        title: "Quantum Circuits".to_string(),
-                        description: "Build and simulate circuits".to_string(),
-                    },
-                    MenuItem {
-                        title: "Entanglement".to_string(),
-                        description: "Bell states and correlations".to_string(),
-                    },
-                    MenuItem {
-                        title: "Bloch Sphere".to_string(),
-                        description: "Qubit state visualization".to_string(),
-                    },
+                    // MenuItem {
+                    //     title: "Quantum Gates".to_string(),
+                    //     description: "Pauli, Hadamard, CNOT gates".to_string(),
+                    // },
+                    // MenuItem {
+                    //     title: "Quantum Circuits".to_string(),
+                    //     description: "Build and simulate circuits".to_string(),
+                    // },
+                    // MenuItem {
+                    //     title: "Entanglement".to_string(),
+                    //     description: "Bell states and correlations".to_string(),
+                    // },
+                    // MenuItem {
+                    //     title: "Bloch Sphere".to_string(),
+                    //     description: "Qubit state visualization".to_string(),
+                    // },
                 ],
             },
             Category {
