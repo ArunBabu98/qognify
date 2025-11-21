@@ -1,5 +1,6 @@
 // app/myapp.rs
 use eframe::{self, egui};
+use crate::app::regression::linear_regression_view::LinearRegressionView;
 
 #[derive(Clone, Debug)]
 pub struct MenuItem {
@@ -18,6 +19,8 @@ pub struct MyApp {
     search_query: String,
     categories: Vec<Category>,
     filtered_categories: Vec<Category>,
+     current_view: Option<String>,  
+    lr_view: LinearRegressionView,  
 }
 
 impl MyApp {
@@ -113,6 +116,8 @@ impl MyApp {
             search_query: String::new(),
             categories,
             filtered_categories,
+             current_view: None, 
+            lr_view: LinearRegressionView::new(),  
         }
     }
 
@@ -305,7 +310,7 @@ impl MyApp {
         }
     }
 
-    fn render_menu_item(&self, ui: &mut egui::Ui, item: &MenuItem) {
+    fn render_menu_item(&mut self, ui: &mut egui::Ui, item: &MenuItem) {
         let item_response = ui.horizontal(|ui| {
             ui.add_space(12.0);
             
@@ -329,14 +334,26 @@ impl MyApp {
         response_for_hover.on_hover_text(&item.description);
         
         if response.clicked() {
-            // Placeholder for future functionality
+             self.current_view = Some(item.title.clone());
             tracing::info!("Clicked on: {}", item.title);
         }
         
         ui.add_space(2.0);
     }
-
+    
     fn render_main_panel(&mut self, ui: &mut egui::Ui) {
+        match &self.current_view {
+            Some(view) if view == "Linear Regression" => {
+                self.lr_view.render(ui);
+            },
+            _ => {
+                // Existing welcome screen code
+                self.render_welcome_screen(ui);
+            }
+        }
+    }
+
+    fn render_welcome_screen(&mut self, ui: &mut egui::Ui) {
         // Center content
         ui.vertical_centered(|ui| {
             ui.add_space(ui.available_height() / 3.0);

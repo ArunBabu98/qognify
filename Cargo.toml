@@ -5,6 +5,7 @@ edition = "2024"
 
 [dependencies]
 eframe = { version = "0.33.2", features = ["wgpu"] }
+egui_plot = "0.34.0"
 tracing = "0.1.41"
 tracing-subscriber = { version = "0.3.20", features = ["fmt", "env-filter"] }
 ndarray = "0.17.1"
